@@ -141,6 +141,10 @@ section#hero {
         6px 6px 1px var(--cedar-green);
 }
 
+h2, h3{
+letter-spacing: 1px;
+}
+
 button {
     display: flex;
     flex-direction: column;
