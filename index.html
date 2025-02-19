@@ -23,7 +23,7 @@
         <li><a href="#services">Services</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="">Log In</a></li>
+        <!-- <li><a href="">Log In</a></li> TODO: Make a Login Page and server to track all clients--> 
       </ul>
     </nav>
   </header>
@@ -123,21 +123,52 @@
       <p>Fill out this form or contact us via our company phone/email/social media, and our team will be happy to assist you. Your satisfaction is our priority, and we’re always ready to provide the best cleaning solutions for your home!
       </p>
       <ul id="socials">
-        <li><a href="mailto:sameer.allkleen@gmail.com" target="_blank"><i class="ri-mail-line"><span class="indent">sameer.allkleen@gmail.com</span></i></a></li>
-        <li><a href="sms:850-943-0311" target="_blank"><i class="ri-phone-line"></i><span class="indent">(916)-764-4102</span></a></li>
-        <li><a href="tel:850-943-0311" target="_blank"><i class="ri-chat-3-line"></i><span class="indent">Message us</span></a></li>
-    </ul>
+        <li><i class="ri-mail-line"></i><a sameer.allkleen@gmail.com href="mailto:sameer.allkleen@gmail.com" target="_blank">sameer.allkleen@gmail.com</a></li>
+        <li><i class="ri-phone-line"></i><a href="sms:916-764-4012" target="_blank">(916)-764-4102</a></li>
+        <li><i class="ri-chat-3-line"></i><a href="tel:916-764-4012" target="_blank">Message us</a></li>
+        <li><i class="ri-map-pin-line"></i><a href="https://maps.app.goo.gl/hw3rDn8EZWeaDH2S6" target="_blank">Visit our Location</a></li>
+      </ul>
     </article>
-    <form action="POST">
-      <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
-      <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
-      <input type="email" id="email" name="email" placeholder="Email" required>
-      <input type="tell" id="phone" name="phone" placeholder="Phone Number">
+    <form>
+      <fieldset id="customer-info">
+        <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+        <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+      </fieldset>
+      <fieldset id="customer-contact">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="tell" id="phone" name="phone" placeholder="Phone Number">
+      </fieldset>
       <input type="address" id="address" name="address" placeholder="Address" required>
       <textarea name="message" placeholder="I wanted to ask about..."></textarea>
       <button id="submit" type="submit">Submit</button>
     </form>
   </section>
+  <footer>
+    Copyright © 2025. AllKleen Solutions, All rights reserved.
+  </footer>
 </body>
+<script>
+  document.getElementById("submit").addEventListener('click', (event) => {
+    // Get user inputs
+    const firstName = document.getElementById("first_name").value.trim();
+    const lastName = document.getElementById("last_name").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.querySelector("textarea").value.trim();
+
+    // Basic validation check
+    if (!firstName || !lastName || !email || !address || !message) {
+      alert("Please fill in all required fields before submitting.");
+      return;
+    }
+
+    // Construct email content
+    const subject = encodeURIComponent("Inquiry about AllKleenSolutions");
+    const body = encodeURIComponent(`${message}\r\n\r\nSincerely,\r\n${firstName} ${lastName}\r\n${address}\r\n${phone}\r\n`);
+
+    // Redirect to mail client
+    window.location.href = `mailto:sameer.allkleen@gmail.com?subject=${subject}&body=${body}`;
+  });
+</script>
 
 </html>
