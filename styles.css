@@ -105,18 +105,21 @@ section#hero {
     background-size: 100vw;
 }
 
-#hero h1 {
+#hero article{
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     top: 25%;
     padding: 25px;
 
     width: 70%;
     border-radius: 25px;
     background-color: rgba(36, 221, 76, 0.7);
+}
 
+#hero h1 {
     font-family: "DM Serif Text", serif;
     font-weight: 600;
     letter-spacing: 5px;
@@ -139,6 +142,58 @@ section#hero {
         4px 4px 1px var(--cedar-green),
         5px 5px 1px var(--cedar-green),
         6px 6px 1px var(--cedar-green);
+}
+
+#hero h2{
+    color: white;
+    text-shadow: 0px 0px 2px black,
+        0px 0px 2px var(--cedar-green),
+        0px 0px 2px var(--cedar-green),
+        0px 0px 2px var(--cedar-green),
+        0px 0px 2px var(--cedar-green),
+        0px 0px 2px var(--cedar-green),
+        0px 0px 2px var(--cedar-green),
+        0px 0px 2px var(--cedar-green),
+        1px 1px 1px var(--cedar-green),
+        2px 2px 1px var(--cedar-green),
+        3px 3px 1px var(--cedar-green),
+        4px 4px 1px var(--cedar-green),
+        5px 5px 1px var(--cedar-green),
+        6px 6px 1px var(--cedar-green);
+}
+#hero a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+#hero i {
+    font-size: 2rem;
+    transition: all 0.1s ease-in-out;
+    text-shadow: 0px 0px 2px black,
+    0px 0px 2px var(--cedar-green),
+    0px 0px 2px var(--cedar-green),
+    0px 0px 2px var(--cedar-green),
+    0px 0px 2px var(--cedar-green),
+    0px 0px 2px var(--cedar-green),
+    0px 0px 2px var(--cedar-green),
+    0px 0px 2px var(--cedar-green),
+    1px 1px 1px var(--cedar-green),
+    2px 2px 1px var(--cedar-green),
+    3px 3px 1px var(--cedar-green),
+    4px 4px 1px var(--cedar-green),
+    5px 5px 1px var(--cedar-green),
+    6px 6px 1px var(--cedar-green);
+}
+
+#hero a:hover i {
+    transform: translate(5px, -5px);
+    transition: transform 0.1s ease-in-out;
 }
 
 h2, h3{
@@ -499,4 +554,33 @@ footer {
     font-size: 12px;
     line-height: 15px;
     text-align: center;
+}
+
+@media screen and (max-width:480px) {   
+
+    body{
+        padding-top: 0;
+    }
+
+    header{
+        height: 10vh;
+        position: relative;
+        padding: 0;
+    }
+    header nav{
+        display: none;
+    }
+    header img{
+        height: 60%;
+    }
+
+    section{
+        height: 100vh;
+    }
+
+    section#hero{
+        height: 100vh;
+        background: var(--header);
+        background-size: 100vw;
+    }
 }
