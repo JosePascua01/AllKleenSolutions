@@ -47,8 +47,6 @@
           Want all natural products for your kleening needs? <br>
           <a href="#about-us"><button>Learn more</button></a>
           or
-          <br>
-          <br>
           Call Fhelma Esta today!
         </p>
         <a href="tel:650-588-7600" target="_blank"><button>(650)-588-7601</button></a>
@@ -217,10 +215,29 @@
           <li><i class="ri-phone-line"></i><a href="sms:650-588-7600" target="_blank">(650)-588-7600</a></li>
           <li><i class="ri-printer-line"></i><a href="tel:650-588-7600" target="_blank">(650)-588-7601</a></li>
           <li><i class="ri-chat-3-line"></i><a href="tel:650-588-7600" target="_blank">Message us</a></li>
+          <li class="mobile"><i class="ri-survey-line"></i><a href="#mobile-form">Fill out form</a></li>
           <li><i class="ri-map-pin-line"></i><a href="https://maps.app.goo.gl/2eHAvqrdyQoiPR5r9" target="_blank">Visit us at our Location</a></li>
         </ul>
       </article>
-      <form>
+      <form class="desktop">
+        <fieldset id="customer-info">
+          <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+          <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+        </fieldset>
+        <fieldset id="customer-contact">
+          <input type="email" id="email" name="email" placeholder="Email" required>
+          <input type="tell" id="phone" name="phone" placeholder="Phone Number">
+        </fieldset>
+        <input type="address" id="address" name="address" placeholder="Address" required>
+        <textarea name="message" placeholder="I wanted to ask about..."></textarea>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </section>
+    <section id="mobile-form">
+      <h2>
+        Fill out this Form
+      </h2>
+      <form class="mobile">
         <fieldset id="customer-info">
           <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
           <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>

@@ -51,7 +51,7 @@ header img {
     height: 50px;
 }
 
-header i.mobile{
+header i.mobile {
     display: none;
 }
 
@@ -63,7 +63,7 @@ header nav {
     width: 45vw;
 }
 
-nav i.mobile{
+nav i.mobile {
     display: none;
 }
 
@@ -101,6 +101,7 @@ section {
 section#hero {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     width: 100vw;
     height: calc(100vh - 70px);
@@ -118,7 +119,6 @@ section#hero {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 25%;
     padding: 25px;
 
     width: 70%;
@@ -509,7 +509,7 @@ section#contact {
     color: var(--text);
     font-family: sans-serif;
     font-size: 18px;
-    line-height: 35px;
+    line-height: 2.1875rem;
     font-weight: 100;
 }
 
@@ -521,7 +521,7 @@ section#contact {
     margin-right: 10px;
 }
 
-form {
+form.desktop {
     display: flex;
     flex-direction: column;
     padding: 25px;
@@ -583,6 +583,14 @@ form button:hover {
     border: 2px solid var(--text-hover);
 }
 
+#socials li.mobile {
+    display: none;
+}
+
+section#mobile-form {
+    display: none;
+}
+
 footer {
     padding: 0;
     display: flex;
@@ -616,7 +624,7 @@ footer {
         padding: 0 15px 0;
     }
 
-    header i.mobile{
+    header i.mobile {
         display: block;
     }
 
@@ -632,7 +640,8 @@ footer {
 
         transition: all 0.5s ease-in-out;
     }
-    nav i.mobile{
+
+    nav i.mobile {
         position: absolute;
         top: 25px;
         right: 25px;
@@ -648,17 +657,17 @@ footer {
         flex-direction: column;
         text-align: center;
         gap: 30px;
-    
+
         width: 100%;
     }
-    
+
     #nav-links a {
         text-decoration: none;
         color: var(--text);
         font-size: 24px;
         font-weight: 400;
     }
-    
+
     #nav-links a:hover {
         text-decoration: none;
         color: var(--text);
@@ -687,7 +696,11 @@ footer {
         overflow: hidden;
     }
 
-    section#hero, section#about-us, section#services, section#products, section#contact{
+    section#hero,
+    section#about-us,
+    section#services,
+    section#products,
+    section#contact {
         overflow: hidden;
     }
 
@@ -701,23 +714,19 @@ footer {
     }
 
     section#hero {
-        justify-content: center;
-
         background: url(assets/AllKleenSolutionHero.jpeg);
         background-size: 100vw;
-        padding: 15px;
     }
 
     #hero article {
+        position: relative;
         padding: 15px;
-        top: 0;
-
         width: 95%;
         border-radius: 10px;
     }
 
     #hero h1 {
-        font-size: 35px;
+        font-size: 2.1875rem;
         line-height: 40px;
         letter-spacing: 1px;
         margin-bottom: 15px;
@@ -765,19 +774,30 @@ footer {
     }
 
     #about-us h2 {
-        font-size: 28px;
+        font-size: 4vh;
         line-height: 30px;
         margin-bottom: 20px;
     }
 
     #about-us p {
+        font-size: 2.2vh;
         margin-bottom: 25px;
     }
 
-    #services h2{
+    #services h2 {
+        font-size: 4vh;
         text-align: center;
     }
-    
+
+    #services h3 {
+        font-size: 3vh;
+    }
+
+    #services p {
+        font-size: 2vh;
+        line-height: 2.1vh;
+    }
+
     #services article.desktop {
         display: none;
     }
@@ -824,7 +844,7 @@ footer {
 
     .swiper-slide img.product-img {
         position: relative;
-        top: 10%;
+        top: 15%;
         left: 50%;
         translate: -50%;
 
@@ -842,7 +862,9 @@ footer {
     .swiper-slide h3 {
         text-align: center;
         font-family: "DM Serif Text", sans-serif;
-        font-size: 24px;
+        font-size: 2vh;
+        line-height: 3vh;
+        margin-bottom: 1vh;
     }
 
     .swiper-slide h3.product-h3 {
@@ -856,8 +878,8 @@ footer {
 
     .swiper-slide p {
         font-family: sans-serif;
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 1rem;
+        line-height: 1.25rem;
     }
 
     #products article.desktop {
@@ -875,15 +897,22 @@ footer {
 
     section#contact {
         flex-direction: column;
+        justify-content: center;
         padding: 25px;
-        gap: 25px;
     }
 
     #contact article {
-        width: calc(100vw - 25px*2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+        height: 100%;
+        width: 100%;
     }
 
     #contact h2 {
+        margin-bottom: 0;
+
         text-align: center;
     }
 
@@ -893,14 +922,59 @@ footer {
 
     #contact p.mobile {
         display: block;
+        margin-bottom: 0;
         text-align: center;
     }
 
-    #contact ul{
+    #contact ul {
+        text-align: center;
+        gap: 25px;
+    }
+
+    #contact li {
+        background: var(--text);
+
+        border-radius: 10px;
+    }
+
+    #contact li a,
+    #contact li i {
+        color: white;
+        font-size: 2.5vh;
+        line-height: 5vh;
+    }
+
+    #contact form.desktop {
+        display: none;
+    }
+
+    #socials li.mobile {
+        display: block;
+    }
+
+
+    section#mobile-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #mobile-form h2 {
+        margin-bottom: 25px;
+
+        font-family: 'DM Sans';
+        color: var(--cedar-green);
         text-align: center;
     }
 
-    #contact form {
-        margin: 0;
+    #mobile-form form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px
+    }
+
+    textarea {
+        height: 30vh;
     }
 }
