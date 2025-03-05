@@ -609,6 +609,11 @@ footer {
 
 @media screen and (max-width:480px) {
 
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 10vh;
+    }
+
     body {
         margin: 0;
         padding: 0;
@@ -775,13 +780,13 @@ footer {
 
     #about-us h2 {
         font-size: 4vh;
-        line-height: 30px;
-        margin-bottom: 20px;
+        line-height: 4.1vh;
+        margin-bottom: 10px;
     }
 
     #about-us p {
         font-size: 2.2vh;
-        margin-bottom: 25px;
+        margin-bottom: 10px;
     }
 
     #services h2 {
