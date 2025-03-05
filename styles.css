@@ -51,12 +51,20 @@ header img {
     height: 50px;
 }
 
+header i.mobile{
+    display: none;
+}
+
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     width: 45vw;
+}
+
+nav i.mobile{
+    display: none;
 }
 
 #nav-links {
@@ -97,7 +105,6 @@ section#hero {
     width: 100vw;
     height: calc(100vh - 70px);
 
-    font-size: 36px;
     text-align: center;
     color: var(--header);
 
@@ -105,7 +112,7 @@ section#hero {
     background-size: 100vw;
 }
 
-#hero article{
+#hero article {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -144,7 +151,7 @@ section#hero {
         6px 6px 1px var(--cedar-green);
 }
 
-#hero h2{
+#hero h2 {
     color: white;
     text-shadow: 0px 0px 2px black,
         0px 0px 2px var(--cedar-green),
@@ -161,6 +168,7 @@ section#hero {
         5px 5px 1px var(--cedar-green),
         6px 6px 1px var(--cedar-green);
 }
+
 #hero a {
     display: flex;
     align-items: center;
@@ -176,19 +184,19 @@ section#hero {
     font-size: 2rem;
     transition: all 0.1s ease-in-out;
     text-shadow: 0px 0px 2px black,
-    0px 0px 2px var(--cedar-green),
-    0px 0px 2px var(--cedar-green),
-    0px 0px 2px var(--cedar-green),
-    0px 0px 2px var(--cedar-green),
-    0px 0px 2px var(--cedar-green),
-    0px 0px 2px var(--cedar-green),
-    0px 0px 2px var(--cedar-green),
-    1px 1px 1px var(--cedar-green),
-    2px 2px 1px var(--cedar-green),
-    3px 3px 1px var(--cedar-green),
-    4px 4px 1px var(--cedar-green),
-    5px 5px 1px var(--cedar-green),
-    6px 6px 1px var(--cedar-green);
+        0px 0px 2px var(--cedar-green),
+        0px 0px 2px var(--cedar-green),
+        0px 0px 2px var(--cedar-green),
+        0px 0px 2px var(--cedar-green),
+        0px 0px 2px var(--cedar-green),
+        0px 0px 2px var(--cedar-green),
+        0px 0px 2px var(--cedar-green),
+        1px 1px 1px var(--cedar-green),
+        2px 2px 1px var(--cedar-green),
+        3px 3px 1px var(--cedar-green),
+        4px 4px 1px var(--cedar-green),
+        5px 5px 1px var(--cedar-green),
+        6px 6px 1px var(--cedar-green);
 }
 
 #hero a:hover i {
@@ -196,8 +204,20 @@ section#hero {
     transition: transform 0.1s ease-in-out;
 }
 
-h2, h3{
-letter-spacing: 1px;
+#hero p {
+    display: none;
+
+    color: white;
+    font-weight: 400;
+}
+
+#hero button {
+    display: none;
+}
+
+h2,
+h3 {
+    letter-spacing: 1px;
 }
 
 button {
@@ -274,10 +294,14 @@ section#services {
     margin: 10px 0 10px;
 }
 
-#services article {
+#services article.desktop {
     display: flex;
     flex-direction: row;
     gap: 25px;
+}
+
+#services article.mobile {
+    display: none;
 }
 
 .services-card {
@@ -344,6 +368,16 @@ section#products {
 
     background: var(--text);
     color: white;
+}
+
+#products article.desktop {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+#products article.mobile {
+    display: none;
 }
 
 #products h2 {
@@ -451,6 +485,14 @@ section#contact {
     margin-bottom: 15px;
 }
 
+#contact p.desktop {
+    display: block;
+}
+
+#contact p.mobile {
+    display: none;
+}
+
 #socials {
     display: flex;
     flex-direction: column;
@@ -462,7 +504,8 @@ section#contact {
 
 }
 
-#socials a, #socials i{
+#socials a,
+#socials i {
     color: var(--text);
     font-family: sans-serif;
     font-size: 18px;
@@ -470,20 +513,20 @@ section#contact {
     font-weight: 100;
 }
 
-#socials a{
+#socials a {
     text-decoration: underline;
 }
 
-#socials i{
+#socials i {
     margin-right: 10px;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     padding: 25px;
     margin: 0 25px 0;
-    gap:10px;
+    gap: 10px;
 
     width: 100%;
     height: calc(100vh - (85px + 75px*2));
@@ -492,7 +535,7 @@ form{
     box-shadow: 5px 5px 20px var(--cedar-green);
 }
 
-fieldset{
+fieldset {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -500,41 +543,41 @@ fieldset{
     border: none;
 }
 
-fieldset input{
+fieldset input {
     width: 50%;
 }
 
-input{
+input {
     padding: 10px;
-    
+
     border-radius: 5px;
     border: 1px solid black;
- 
+
     line-height: 25px;
     font-size: 18px;
     font-weight: 100
 }
 
-textarea{
+textarea {
     padding: 10px;
-    
+
     height: 100%;
     border-radius: 5px;
     border: 1px solid black;
- 
+
     line-height: 25px;
     font-size: 18px;
     font-weight: 100
 }
 
-form button{
+form button {
     align-self: center;
 
     width: 100%;
     transition: all 0.1s ease-in;
 }
 
-form button:hover{
+form button:hover {
     background: var(--text-hover);
     color: var(--header);
     border: 2px solid var(--text-hover);
@@ -556,31 +599,299 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width:480px) {   
+@media screen and (max-width:480px) {
 
-    body{
-        padding-top: 0;
-    }
-
-    header{
-        height: 10vh;
-        position: relative;
+    body {
+        margin: 0;
         padding: 0;
     }
-    header nav{
+
+    header {
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+
+        height: 10vh;
+        width: 100vw;
+        padding: 0 15px 0;
+    }
+
+    header i.mobile{
+        display: block;
+    }
+
+    header nav {
+        position: absolute;
+        top: 0;
+        left: -100vw;
+
+        width: 100vw;
+        height: 100vh;
+
+        background: var(--header);
+
+        transition: all 0.5s ease-in-out;
+    }
+    nav i.mobile{
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        display: block;
+
+        color: var(--text);
+        font-size: 30px;
+    }
+
+    #nav-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    
+        width: 100%;
+    }
+    
+    #nav-links a {
+        text-decoration: none;
+        color: var(--text);
+        font-size: 24px;
+        font-weight: 400;
+    }
+    
+    #nav-links a:hover {
+        text-decoration: none;
+        color: var(--text);
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+
+    header img {
+        height: 75%;
+    }
+
+    .ri-menu-line {
+        font-size: 25px
+    }
+
+    main {
+        position: relative;
+        overflow-y: scroll;
+    }
+
+    section {
+        padding: 15px;
+        height: calc(100vh - 10vh);
+        width: 100vw;
+    }
+
+    a {
+        justify-content: center;
+    }
+
+    button {
+        letter-spacing: 1px;
+        border-radius: 25px;
+    }
+
+    section#hero {
+        justify-content: center;
+
+        background: url(assets/AllKleenSolutionHero.jpeg);
+        background-size: 100vw;
+        padding: 15px;
+    }
+
+    #hero article {
+        padding: 15px;
+        top: 0;
+
+        width: 95%;
+        border-radius: 10px;
+    }
+
+    #hero h1 {
+        font-size: 35px;
+        line-height: 40px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+
+    #hero h2 {
+        content: "Visit our location";
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    #hero i {
         display: none;
     }
-    header img{
-        height: 60%;
+
+    #hero p {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 15px 0 0;
+        justify-content: space-around;
+
+        border-top: 1px solid black;
+
+        text-align: center;
+        text-shadow: 1px 1px 2px var(--cedar-green);
     }
 
-    section{
-        height: 100vh;
+    #hero button {
+        display: block;
+        margin: 15px 0 15px;
+
+        background: var(--cedar-green);
+        border: 2px solid var(--cedar-green);
     }
 
-    section#hero{
-        height: 100vh;
-        background: var(--header);
-        background-size: 100vw;
+    section#about-us {
+        padding: 25px;
+    }
+
+    #about-us img {
+        display: none;
+    }
+
+    #about-us h2 {
+        font-size: 28px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    #about-us p {
+        margin-bottom: 25px;
+    }
+
+    #services article.desktop {
+        display: none;
+    }
+
+    #services article.mobile {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .swiper {
+        width: 85vw;
+        height: calc(100vh - (10vh*3));
+    }
+
+    .swiper-slide {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 200px);
+
+        background: white;
+        border-radius: 25px;
+
+        color: var(--text);
+    }
+
+    .swiper-slide a {
+        position: absolute;
+        bottom: 10%;
+        display: flex;
+
+        width: 100%;
+
+        text-decoration: none;
+    }
+
+    .swiper-slide img {
+        width: 85vw;
+
+        border-radius: 25px 25px 0 0;
+    }
+
+    .swiper-slide img.product-img {
+        position: relative;
+        top: 10%;
+        left: 50%;
+        translate: -50%;
+
+        width: 50vw;
+    }
+
+    .swiper-slide summary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 15px 20px 15px;
+    }
+
+    .swiper-slide h3 {
+        text-align: center;
+        font-family: "DM Serif Text", sans-serif;
+        font-size: 24px;
+    }
+
+    .swiper-slide h3.product-h3 {
+        position: relative;
+        top: 15%;
+
+        text-align: center;
+        font-family: "DM Serif Text", sans-serif;
+        font-size: 24px;
+    }
+
+    .swiper-slide p {
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    #products article.desktop {
+        display: none;
+    }
+
+    #products article.mobile {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #products h2 {
+        margin: 10px 0 10px;
+    }
+
+    section#contact {
+        flex-direction: column;
+        padding: 25px;
+        gap: 25px;
+    }
+
+    #contact article {
+        width: calc(100vw - 25px*2);
+    }
+
+    #contact h2 {
+        text-align: center;
+    }
+
+    #contact p.desktop {
+        display: none;
+    }
+
+    #contact p.mobile {
+        display: block;
+        text-align: center;
+    }
+
+    #contact ul{
+        text-align: center;
+    }
+
+    #contact form {
+        margin: 0;
     }
 }
