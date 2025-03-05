@@ -702,6 +702,8 @@ footer {
         background: url(assets/AllKleenSolutionHero.jpeg);
         background-size: 100vw;
         padding: 15px;
+
+        overflow-y: hidden;
     }
 
     #hero article {
