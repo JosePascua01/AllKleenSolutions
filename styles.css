@@ -684,7 +684,11 @@ footer {
         padding: 15px;
         height: calc(100vh - 10vh);
         width: 100vw;
-        overflow-y: hidden;
+        overflow: hidden;
+    }
+
+    section#hero, section#about-us, section#services, section#products, section#contact{
+        overflow: hidden;
     }
 
     a {
@@ -702,8 +706,6 @@ footer {
         background: url(assets/AllKleenSolutionHero.jpeg);
         background-size: 100vw;
         padding: 15px;
-
-        overflow-y: hidden;
     }
 
     #hero article {
